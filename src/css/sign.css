@@ -1,0 +1,96 @@
+.box{
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input1{
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: 1px solid #de3232;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 1px;
+    height: 38px;
+    padding-left: 10px;
+    outline: none;
+    font-size: 18px;      
+}
+.input1::placeholder{
+    color: #a5a5a5;
+    font-size: 18px;
+}
+
+.login_btn{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    min-width: 1px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: #de3232;
+    color: #ffffff;
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+    border: 0;
+}
+.link_btn{
+    color: #4d35a6;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.avater_btn{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    position: relative;
+}
+.avatar{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+}
+.previewimg{
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+}
+.avater_btn::before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #888888;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -15px;
+}
+
+.avater_btn::after{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background-color: #888888;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 50%;
+    margin-left: -1px;
+}
+
+
+.itemname{
+    color: #a5a5a5;
+    font-size: 18px;
+    line-height: 22px;
+}

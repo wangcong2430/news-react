@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预览图片</title>
+</head>
+
+<body>
+    <input type="file" onchange="selecti(this)" accept="image/*" />
+    <img src="" alt="" id="img" />
+    <script>
+        function selecti(img) {    
+            console.dir(img) //获取选择的图片对象信息       
+            var file = img.files[0]//获取选择的图片信息
+            var reader = new FileReader()//创建一个实例化对象
+            reader.readAsDataURL(file)//将文件转成64位图片格式
+            reader.onload = function() {//监听reader事件的变化
+                console.log(this)
+                document.getElementById('img').src = this.result
+            }
+        }
+    </script>
+</body>
+
+</html>

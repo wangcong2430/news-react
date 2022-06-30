@@ -1,0 +1,53 @@
+.foot{
+    height: 40px;
+    width: 100%;
+    border-top: 1px solid #c4c4c4;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #c4c4c4;
+}
+
+.foot>a{
+    flex: 1;
+    height: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.foot>a.sel>span:nth-child(2){
+    color: #de3232;
+}
+.foot>a.sel>.indexicon{
+    background: url(../images/index2.png);
+    background-size: contain;
+}
+
+.foot>a.sel>.myicon{
+    background: url(../images/my2.png);
+    background-size: contain;
+}
+
+
+.indexicon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/index1.png);
+    background-size: contain;
+}
+.myicon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/my1.png);
+    background-size: contain;
+}
+
+.foot>a>span:nth-child(2){
+    color: #787878;
+    font-size: 12px;
+    margin-top: -10px;
+}

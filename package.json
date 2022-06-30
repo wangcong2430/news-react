@@ -6,13 +6,22 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "antd-mobile": "^5.12.6",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^8.0.2",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.3.3",
     "react-scripts": "4.0.3",
+    "redux": "^4.2.0",
+    "styled-components": "^5.3.5",
     "web-vitals": "^1.0.1",
     "webpack": "^4.44.2"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -36,5 +45,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-react-defaultprops": "^1.0.9"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules":{
+      "jsx-a11y/anchor-is-valid":"off"
+    }
   }
+ 
+
 }
