@@ -21,10 +21,39 @@ class Index0 extends Component {
         page: 1
     }
     componentDidMount() {
-
+        if(localStorage.getItem('cur')){
+            this.setState({
+                cur:parseInt( localStorage.getItem('cur')),
+                
+            },()=>{
+                request.post('/news', {//发起获取新闻列表的请求
+                    type: this.state.list[this.state.cur]
+                }).then((res) => {
+                    console.log(res)
+                    this.setState({
+                        newsinfo: res.data
+                    })
+                }).catch((error) => {
+                    console.log(error)
+                })
+            })
+           
+        }else{
+            request.post('/news', {//发起获取新闻列表的请求
+                type: this.state.list[this.state.cur]
+            }).then((res) => {
+                console.log(res)
+                this.setState({
+                    newsinfo: res.data
+                })
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
     }
 
     change = (idx) => {//切换分类
+        localStorage.setItem('cur',idx)
         this.setState({
             cur: idx
         }, () => {
